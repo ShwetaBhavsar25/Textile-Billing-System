@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SAGAR COLLECTION, KOPARGAON</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<script>
+    var v1=0,v2=0,v3=0,v4=0,v5=0,v6=0,total=0;
+    $(document).change(function(){
+        // total = parseInt(v1) + v2 + v3 + v4 + v5 + v6;
+        total = parseInt(v1) + parseInt(v2) + parseInt(v3) + parseInt(v4) + parseInt(v5) + parseInt(v6) ;
+        $("#finalTotal").val(total);
+       
+    })
+
+    $(document).ready(function(){
+        $("#sareeQty").change(function(){
+            $("#sareeTotal").val( $("#sareeQty").val() * $("#sareeRate").val() );
+           
+        });
+
+        $("#sareeRate").change(function(){
+            
+            $("#sareeTotal").val( $("#sareeQty").val() * $("#sareeRate").val() );
+            v1 =  $("#sareeTotal").val();
+            
+        });
+
+
+   
+
+
+        $("#shirtQty").change(function(){
+        
+            $("#shirtTotal").val( $("#shirtQty").val() * $("#shirtRate").val() );
+        });
+
+        $("#shirtRate").change(function(){
+           
+        
+            $("#shirtTotal").val( $("#shirtQty").val() * $("#shirtRate").val() );
+            v2 =  $("#shirtTotal").val();
+          
+         });
+    $("#pantQty").change(function(){
+        
+        $("#pantTotal").val( $("#pantQty").val() * $("#pantRate").val() );
+
+    });
+
+    $("#pantRate").change(function(){
+    
+        $("#pantTotal").val( $("#pantQty").val() * $("#pantRate").val() );
+        v3 =  $("#pantTotal").val();
+
+     });
+
+
+     
+    $("#topRate").change(function(){
+        
+        $("#topTotal").val( $("#topQty").val() * $("#topRate").val() );
+        v4 =  $("#topTotal").val();
+
+    });
+
+
+    
+    $("#topQty").change(function(){
+        
+        $("#topTotal").val( $("#topQty").val() * $("#topRate").val() );
+
+    });
+
+
+
+    $("#jeansRate").change(function(){
+        
+        $("#jeansTotal").val( $("#jeansQty").val() * $("#jeansRate").val() );
+        v5 =  $("#jeansTotal").val();
+
+    });
+
+
+    
+    $("#jeansQty").change(function(){
+        
+        $("#jeansTotal").val( $("#jeansQty").val() * $("#jeansRate").val() );
+
+    });
+
+     
+
+    $("#clothQty").change(function(){
+        
+        $("#clothTotal").val( $("#clothQty").val() * $("#clothRate").val() );
+
+    });
+
+
+    
+    $("#clothRate").change(function(){
+        
+        $("#clothTotal").val( $("#clothQty").val() * $("#clothRate").val() );
+        v6 =  $("#clothTotal").val();
+
+
+    });
+
+  
+
+
+    });
+    </script>
+
+</head>
+<body  style="background-color:powderblue;">
+
+<div class="container">
+	<div class="row justify-content-center">
+		<h1 class="text-center">SAGAR COLLECTION</h1>
+	</div>
+	<div class="row justify-content-center">
+		<h1 class="text-center">KOPARGAON</h1>
+	</div>
+</div>
+
+<div class='container mt-3'>
+<div class="row justify-content-center">
+		<div class='col-4 text-center'>Phone no.: 02423223380</div>
+		<div class='col-4 text-center'>GST no.: 2356987412</div>
+		<div class='col-4 text-center'>Email: sagar@gmail.com</div>
+	</div>
+</div>
+
+<form action="register" method="post">  
+ <center> 
+
+
+<div class='container '>
+<div class="row justify-content-center">
+		<div class='col-6 text-center mb-3'><input type="text" class="form-control" placeholder="Enter Customer Name" name="customerName" ></div>
+		<div class='col-6 text-center'><input type="text" class="form-control" placeholder="Enter Customer Address"  name="customerAddress" ></div>
+		<div class='col-6 text-center'><input type="text" class="form-control" placeholder="Enter Customer Contact Number"  name="contactNo" ></div>
+		<div class='col-6 text-center'><input type="date" class="form-control"  name="date" ></div>
+		
+		
+	</div>
+</div>
+
+
+<div class="container mt-5 pt-5">
+	<div class="row">
+		<div class="col-6">
+								
+				<table border="1"  >  
+				<tr style="text-align:center">
+				<th >MATERIAL </th>  
+				<th>QUANTITY</th> 
+				<th>RATE</th>  
+				<th>TOTAL</th>
+				</tr>
+				
+				<tr style="text-align:center">
+				<td width="200">SAREE </td>
+				<td><input type="number" name="sareeQty" id="sareeQty" value="0" ></td>
+				<td><input type="number" name="sareeRate" id="sareeRate" value="0" ></td>
+				<td> <input type="number" name="sareeTotal" id="sareeTotal" value="0"></td>
+				</tr>
+				
+				<tr style="text-align:center">
+				<td>SHIRT </td>
+				<td><input type="number" name="shirtQty" id="shirtQty" value="0" ></td>
+				<td><input type="number" name="shirtRate" id="shirtRate" value="0" ></td>
+				<td> <input type="number" name="shirtTotal" id="shirtTotal" value="0"></td>
+				</tr>
+				<tr style="text-align:center">
+				<td>PANT </td>
+				<td><input type="number" name="pantQty" id="pantQty" value="0" ></td>
+				<td> <input type="number" name="pantRate" id="pantRate" value="0"></td>
+				<td><input type="number" name="pantTotal" id="pantTotal" value="0" ></td>
+				
+				</tr>
+				
+				<tr style="text-align:center">
+				<td>TOP </td>
+				<td><input type="number" name="topQty" id="topQty" value="0" ></td>
+				<td> <input type="number" name="topRate" id="topRate" value="0"></td>
+				<td><input type="number" name="topTotal" id="topTotal" value="0" ></td>
+				
+				</tr>
+				
+				<tr style="text-align:center">
+				<td>JEANS </td>
+				<td><input type="number" name="jeansQty" id="jeansQty" value="0" ></td>
+				<td> <input type="number" name="jeansRate" id="jeansRate" value="0"></td>
+				<td><input type="number" name="jeansTotal" id="jeansTotal" value="0" ></td>
+				
+				</tr>
+				
+				<tr style="text-align:center">
+				<td>CLOTH </td>
+				<td><input type="number" name="clothQty" id="clothQty"  value="0" ></td>
+				<td> <input type="number" name="clothRate" id="clothRate"  value="0"></td>
+				<td><input type="number" name="clothTotal" id="clothTotal"  value="0" ></td>
+				
+				</tr>
+				
+				<tr style="text-align:center">
+				<td >TOTAL AMOUNT </td>
+				
+				<td colspan ="3"> <input  type="number" name="finalTotal" id="finalTotal" value="0"  >
+				
+				</td>
+				</tr>
+				</table>
+		</div>
+	
+	
+		<div class="col-6">
+		
+		 <input class="btn btn-success p-3" type="submit" value="SAVE BILL"> <br/>
+		 <a class="btn btn-warning p-3 mt-2" href="display">View Bills</a>  
+		</div>
+	</div>
+
+
+</div>  
+
+</form>  
+  </br>
+
+  
+<br/> </br></br>  
+
+  
+
+</center>
+
+
+</body>
+</html>
